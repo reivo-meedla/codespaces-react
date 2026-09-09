@@ -1,10 +1,11 @@
 import ExpenseDate from './ExpenseDate'
 import './ExpenseItem.css'
+import './Expenses.css'
 
 const ExpenseItem = (props) => {
 
     return (
-        <div>
+        <div className='expenses'>
             <div className='expense-item'>
                 <ExpenseDate date={props.data.date}/>
                 <div className='expense-item__description'>
