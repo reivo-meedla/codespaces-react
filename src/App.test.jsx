@@ -7,3 +7,10 @@ test('renders all expenses', () => {
   expect(screen.getByText('New book')).toBeDefined();
   expect(screen.getByText('Doohickey')).toBeDefined();
 });
+
+test('renders the new expense form inputs', () => {
+  render(<App />);
+  expect(screen.getByLabelText('Title')).toBeDefined();
+  expect(screen.getByLabelText('Price')).toBeDefined();
+  expect(screen.getByLabelText('Date')).toBeDefined();
+});
