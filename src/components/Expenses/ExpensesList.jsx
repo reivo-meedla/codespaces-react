@@ -1,0 +1,18 @@
+import './ExpensesList.css';
+import expenseItem from './ExpenseItem';
+
+const ExpensesList = (props) => {
+    if (props.items.length === 0) {
+        return <h2 className='expenses-list__fallback'>No expenses found for the selected year.</h2>
+    }
+
+    return (
+        <ul className='expenses-list'>
+            {props.items.map((expense) => (
+                <expenseItem key={expense.id} data={expense} />
+            ))}
+        </ul>
+    )
+}
+
+export default ExpensesList;
