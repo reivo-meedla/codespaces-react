@@ -35,23 +35,24 @@ const ExpenseForm = (props) => {
         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
-                    <label>Title</label>
-                        <input type='text' 
+                    <label htmlFor='title'>Title</label>
+                        <input id='title' type='text' 
                         onChange={titleChangeHandler} 
                         value={enteredTitle} 
                     />
                 </div>
                 <div className='new-expense__control'>
-                    <label>Amount</label>
-                    <input type='number' min='0.01' step='0.01' onChange={amountChangeHandler} value={enteredAmount} />
+                    <label htmlFor='amount'>Amount</label>
+                    <input id='amount' type='number' min='0.01' step='0.01' onChange={amountChangeHandler} value={enteredAmount} />
                 </div>
                 <div className='new-expense__control'>
-                    <label>Date</label>
-                    <input type='date' min='2024-01-01' max='2024-12-31' onChange={dateChangeHandler} value={enteredDate} />
+                    <label htmlFor='date'>Date</label>
+                    <input id='date' type='date' min='2024-01-01' max='2024-12-31' onChange={dateChangeHandler} value={enteredDate} />
                 </div>
             </div>
             <div className='new-expense__actions'>
                 <button type='submit'>Add Expense</button>
+                <button type='button' className='new-expense__button' onClick={props.onCancel}>Cancel</button>
             </div>
         </form>
     )
