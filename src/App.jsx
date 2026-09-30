@@ -10,7 +10,7 @@ const DYMMY_EXPENSES = [{
 },
 {
   id: 'id2',
-  date: new Date(2020, 4, 20),
+  date: new Date(2023, 4, 20),
   title: 'Doohickey',
   amount: 99.99
 },
